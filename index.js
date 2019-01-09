@@ -54,10 +54,11 @@ function sacaResultado(){
     let cosa = $("input").val();
    if(tipo=="anime"){
        $.getJSON("https://api.jikan.moe/v3/search/anime?q="+cosa+" &page="+ numpag, function(mangas){
-               $('img#slidecaption').hide('2000');
+              
            for (  manga of mangas.results){
             meteManga(manga);
         }
+           $('img#slidecaption').hide('2000'); 
          peticionEnCurso=false;  
            
     });
@@ -65,12 +66,15 @@ function sacaResultado(){
     
     else{
   $.getJSON("https://api.jikan.moe/v3/search/manga?q="+cosa+" &page="+ numpag, function(mangas){
-              $('img#slidecaption').hide('2000'); 
+              
       for (  manga of mangas.results){
             meteManga(manga);
         }
        peticionEnCurso=false;
+      $('img#slidecaption').hide('2000'); 
     });
+    }else{
+       $('img#slidecaption').hide(); 
     }
     }
 }
