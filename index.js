@@ -58,9 +58,8 @@ function sacaResultado(){
            for (  manga of mangas.results){
             meteManga(manga);
         }
-           $('img#slidecaption').hide('2000'); 
          peticionEnCurso=false;  
-           
+            $('img#slidecaption').hide('2000'); 
     });
    }  
     
@@ -73,9 +72,9 @@ function sacaResultado(){
        peticionEnCurso=false;
       $('img#slidecaption').hide('2000'); 
     });
+    }
     }else{
        $('img#slidecaption').hide(); 
-    }
     }
 }
 function busca(){
