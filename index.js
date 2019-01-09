@@ -84,9 +84,9 @@ function meteManga(manga){
     $("#biblioteca").append($("<div class='resu' onmouseover='muestra(this)' onmouseout='esconde(this)' ><img   alt='"+manga.synopsis+"'  src="+manga.image_url+" ><p>"+manga.title+"</p>   <p hidden='true' >"+manga.synopsis+" </p></div>"));
 }
 
-function imgvacia(peli) {
-    if (peli.image_url == "N/A") {
-        peli.image_url = "imagenes/latest.png";
+function imgvacia(manga) {
+    if (manga.image_url == "N/A") {
+        manga.image_url = "imagenes/latest.png";
     }
 }
 
