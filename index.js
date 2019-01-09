@@ -78,7 +78,8 @@ function busca(){
 
 function meteManga(manga){
     imgvacia(manga);
-    $("#biblioteca").append($("<div class='resu'><img src="+manga.image_url+"><p>"+manga.title+"</p></div>"));
+    $("#biblioteca").append($("<div class='resu' onmouseover='muestra(this)' onmouseout='esconde(this)' >
+   <img   alt='"+manga.synopsis+"'  src="+manga.image_url+" ><p>"+manga.title+"</p>   <p hidden='true' >"+manga.synopsis+" </p></div>"));
 }
 
 function imgvacia(peli) {
@@ -87,3 +88,15 @@ function imgvacia(peli) {
     }
 }
 
+
+function muestra(dilo){
+    
+   $(dilo.lastChild).show();
+}
+
+function esconde(dilo){
+    
+   $(dilo.lastChild).hide();
+    
+    
+}
