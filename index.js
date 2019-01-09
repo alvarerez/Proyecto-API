@@ -75,6 +75,7 @@ function sacaResultado(){
     }
     }else{
        $('img#slidecaption').hide(); 
+        peticionEnCurso=false;
     }
 }
 function busca(){
