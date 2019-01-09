@@ -78,8 +78,7 @@ function busca(){
 
 function meteManga(manga){
     imgvacia(manga);
-    $("#biblioteca").append($("<div class='resu' onmouseover='muestra(this)' onmouseout='esconde(this)' >
-   <img   alt='"+manga.synopsis+"'  src="+manga.image_url+" ><p>"+manga.title+"</p>   <p hidden='true' >"+manga.synopsis+" </p></div>"));
+    $("#biblioteca").append($("<div class='resu' onmouseover='muestra(this)' onmouseout='esconde(this)' ><img   alt='"+manga.synopsis+"'  src="+manga.image_url+" ><p>"+manga.title+"</p>   <p hidden='true' >"+manga.synopsis+" </p></div>"));
 }
 
 function imgvacia(peli) {
